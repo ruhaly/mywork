@@ -1,0 +1,1 @@
+document.write('<a href="http://wot.51cto.com/cloud2013/" target="_blank" style="text-decoration: none;">2013云计算架构师峰会超低价抢票中</a>');

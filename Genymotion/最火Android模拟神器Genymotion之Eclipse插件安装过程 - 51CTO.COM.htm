@@ -1,0 +1,634 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0042)http://mobile.51cto.com/aengine-404920.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<meta http-equiv="x-ua-compatible" content="ie=7">
+<title>最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM</title>
+<meta name="description" content="Genymotion最有趣的一项功能就是允许用户测试自己利用Eclipse IDE开发出的应用程序。它利用ADB与任何活动Genymotion虚拟设备连接，并以此为基础进行应用程序推送。">
+<meta name="keywords" content="Android,模拟器,Genymotion,插件">
+<!--<base target="_blank">--><base href="." target="_blank">
+<link href="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/grid.css" rel="stylesheet" type="text/css">
+<link type="text/css" rel="stylesheet" href="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/art_master_top.css">
+<link href="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/css3.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" async="" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/ga.js"></script><script language="javaScript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/base_art.js"></script>
+<script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/index_1_down.js"></script>
+<style type="text/css">
+.bds_tools a{ padding:0; margin:0;}
+</style>
+<link href="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/bdsstyle.css" rel="stylesheet" type="text/css"><script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/logger.js"></script></head>
+<body ryt12807="1"><iframe style="display: none; " frameborder="0"></iframe><div id="bdshare_s" style="display: block; "><iframe id="bdsIfr" style="position:absolute;display:none;z-index:9999;" frameborder="0"></iframe><div id="bdshare_l" style="display: none; "><div id="bdshare_l_c"><h6>分享到</h6><ul><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_mshare mshare">一键分享</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_qzone qqkj">QQ空间</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_tsina xlwb">新浪微博</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_baidu bdsc">百度云收藏</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_renren rrw">人人网</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_tqq txwb">腾讯微博</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_bdxc bdxc">百度相册</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_kaixin001 kxw">开心网</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_tqf txpy">腾讯朋友</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_tieba bdtb">百度贴吧</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_douban db">豆瓣网</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_tsohu shwb">搜狐微博</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_bdhome bdhome">百度新首页</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_sqq sqq">QQ好友</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_thx thx">和讯微博</a></li><li><a href="http://mobile.51cto.com/aengine-404920.htm#" class="bds_more">更多...</a></li></ul><p><a href="http://mobile.51cto.com/aengine-404920.htm#" class="goWebsite">百度分享</a></p></div></div></div>
+<!-- 导航 开始-->
+<div id="home_top">    <div class="top_nav">        <div class="left" style="width:400px"><div class="logo_51cto" title="51CTO.COM - 技术成就梦想 -  中国领先的IT技术网站"></div><a href="http://www.51cto.com/">首页</a><img width="16" height="25" align="absmiddle" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/top_bg_xian.gif" style="padding-top: 2px;"><a onmouseover="show(1,this);" onmouseout="popupClose();" href="http://www.51cto.com/col/35/" target="_blank">技术频道<img align="absmiddle" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/nav_ico1.gif" style="padding-left: 4px;"></a><img width="16" height="25" align="absmiddle" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/top_bg_xian.gif"><a onmouseover="show(2,this);" onmouseout="popupClose();" href="http://www.51cto.com/" target="_blank">51CTO旗下网站<img align="absmiddle" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/nav_ico1.gif" style="padding-left: 4px;"></a><img width="16" height="25" align="absmiddle" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/top_bg_xian.gif"><a href="http://www.51cto.com/about/map.htm" target="_blank">地图</a> <a href="http://www.51cto.com/about/rss.html" target="_blank"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/143749870.gif" style="vertical-align:middle; margin-bottom: 5px; margin-left:5px;"></a>       </div>        <div class="right">            <div class="more"><img width="27" height="16" align="absmiddle" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/top_shequ.gif"><a href="http://bbs.51cto.com/" target="_blank">论坛</a><a href="http://blog.51cto.com/" target="_blank">博客</a><a href="http://down.51cto.com/" target="_blank">下载</a><a href="http://edu.51cto.com/" target="_blank">视频课程</a><a onmouseover="show(3,this)" onmouseout="popupClose()" href="javascript:viod(0);">更多<img align="absmiddle" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/nav_ico1.gif" style="padding-left: 4px;"></a>            </div>            <span id="login_status"><div class="login" style="padding-top:8px; text-align:right;"><a href="http://home.51cto.com/index.php?s=/Home/index" style="background:none"><img style="margin-top:-3px" id="dia" align="absmiddle" width="20" title="今天领无忧币了吗？" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/dia.gif"></a><a href="http://home.51cto.com/?reback=http%253A%252F%252Fmobile.51cto.com%252Faengine-404920.htm" target="_self">登录</a><a href="http://ucenter.51cto.com/reg_01.php?reback=http%253A%252F%252Fmobile.51cto.com%252Faengine-404920.htm" target="_self">注册</a></div></span>                </div>    </div></div>
+<div class="subMenu1" id="s1" onmouseover="popupNoClose();" onmouseout="popupClose();" style="display: none; top: 29px; left: 324px; ">
+<ul>
+<li><a href="http://network.51cto.com/" target="_blank">网络</a></li>
+<li><a href="http://netsecurity.51cto.com/" target="_blank">安全</a></li>
+<li><a href="http://developer.51cto.com/" target="_blank">开发</a></li>
+<li><a href="http://database.51cto.com/" target="_blank">数据库</a></li>
+<li><a href="http://server.51cto.com/" target="_blank">服务器</a></li>
+<li><a href="http://os.51cto.com/" target="_blank">系统</a></li>
+<li><a href="http://virtual.51cto.com/" target="_blank">虚拟化</a></li>
+<li><a href="http://cloud.51cto.com/" target="_blank">云计算</a></li>
+<li><a href="http://developer.51cto.com/embed/" target="_blank">嵌入式</a></li>
+<li><a href="http://mobile.51cto.com/" target="_blank">移动开发</a></li>
+</ul>
+</div> 
+<div class="subMenu2" id="s2" onmouseover="popupNoClose()" onmouseout="popupClose()" style="display: none; top: 29px; left: 402px; ">
+<ul>
+<li><a href="http://www.51cto.com/" target="_blank" title="中国领先的IT技术网站">51CTO.COM</a></li>
+<li><a href="http://www.cioage.com/" target="_blank" title="中国首个专门服务于CIO的专业网站">CIOage.com</a></li>
+<li><a href="http://www.watchstor.com/" target="_blank" title="领先的中文存储网络媒体">WatchStor.com</a></li>
+<li><a href="http://www.hc3i.cn/" target="_blank" title="中国首家专注于数字医疗及医疗信息化的专业网站">HC3i.cn</a></li>
+<li><a href="http://www.linkphone.cn/" target="_blank" title="移动互联网生活门户">灵客风LinkPhone</a></li>
+</ul>
+</div>
+<script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/jquery-1.4.4.js"></script>
+<script>
+$(function(){
+	$(".bann").height(265);	 
+	$(".bann").css("background-color","white");
+});
+
+</script>
+
+<script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/head_art_more1.js"></script><div class="subMenu3" id="s3" onmouseover="popupNoClose()" onmouseout="popupClose()" style="z-index: 9999; position: absolute; display: none; ">
+<ul>
+<li><a href="http://home.51cto.com/" target="_blank">家园</a></li>
+<li><a href="http://t.51cto.com/" target="_blank">微博</a></li>
+<li><a href="http://blog.51cto.com/" target="_blank">博客</a></li>
+<li><a href="http://bbs.51cto.com/" target="_blank">论坛</a></li>
+<li><a href="http://down.51cto.com/" target="_blank">下载</a></li>
+<li><a href="http://edu.51cto.com/" target="_blank">课程</a></li>
+<li><a href="http://selftest.51cto.com/" target="_blank">自测</a></li>
+<li><a href="http://doctor.51cto.com/" target="_blank">门诊</a></li>
+<li><a href="http://blog.51cto.com/newsletter/" target="_blank">周刊</a></li>
+<li><a href="http://book.51cto.com/" target="_blank">读书</a></li>
+<li><a href="http://g.51cto.com/" target="_blank">技术圈</a></li>
+</ul>
+</div>
+
+<!-- 登陆信息 -->
+<!-- 导航 结束--> 
+ <div class="g_39 mb10">
+	<div id="tonglanad" class="fl"><script language="JavaScript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/ad.js"></script><script type="text/javascript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/ad.php"></script><iframe width="760" height="90" noresize="" scrolling="No" frameborder="0" marginheight="0" marginwidth="0" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/14(1).htm" align="left"></iframe></div>
+	<div id="list4" class="fr">
+		<ul>
+			<li id="wordlinkad1"><script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wordlink1.js"></script><script language="JavaScript" type="text/javascript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adjs.php"></script><a href="http://vd.51cto.com/adclick.php?bannerid=10178&zoneid=477&source=&dest=http%3A%2F%2Fserver.51cto.com%2FIntegrate-403152.htm" target="_blank"><font color="red">PureSystems沃土上的从兴</font></a><div id="beacon_10178" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adlog.php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div></li>
+			<li id="wordlinkad2"><script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wordlink2.js"></script><script language="JavaScript" type="text/javascript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adjs(1).php"></script><a href="http://vd.51cto.com/adclick.php?bannerid=9864&zoneid=478&source=&dest=http%3A%2F%2Fcloud.51cto.com%2Fexp%2Fsapbigdata2013%2Fdownload.html" target="_blank"><font color="blue">免费下载SAP大数据精华资料</font></a><div id="beacon_9864" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adlog(1).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div></li>
+			<li id="wordlinkad3"><script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wordlink3.js"></script><script language="JavaScript" type="text/javascript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adjs(2).php"></script><a href="http://vd.51cto.com/adclick.php?bannerid=10083&zoneid=479&source=&dest=http%3A%2F%2Fwww.hillstonenet.com.cn%2Fpub%2Fnewsletter%2F2013seminar%2Findex_51.html" target="_blank"><font color="red">山石网科用户研讨会邀您参会</font></a><div id="beacon_10083" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adlog(2).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div></li>
+			<li id="wordlinkad4"><script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wordlink4.js"></script><script language="JavaScript" type="text/javascript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adjs(3).php"></script><a href="http://vd.51cto.com/adclick.php?bannerid=9996&zoneid=480&source=&dest=http%3A%2F%2Fwww.ruijie.com.cn%2Fproduct%2Fproduct.aspx%3FID%3D4da1b0e1-2469-4b62-a2b0-d3783518f461%26utm_source%3D51CTO%26utm_medium%3D%25E7%25BD%2591%25E7%25BB%259C%25E9%25A2%2591%25E9%2581%2593%25E5%2586%2585%25E9%25A1%25B5%26utm_campaign%3DNBS%25E4%25BA%25A4%25E6%258D%25A2%25E6%259C%25BA%26utm_adgroup%3Dwenzilian" target="_blank"><font color="red">中小企业智能网管交换机推荐</font></a><div id="beacon_9996" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adlog(3).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div></li>
+		</ul>
+	</div>
+<br class="dle">
+</div>
+
+<div class="g_39 menu">
+<div class="subNav_logo"><a href="http://mobile.51cto.com/" title="移动开发"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/143329156.gif"></a></div>
+<div class="subNav_l"><a href="http://mobile.51cto.com/">首页</a> | <a href="http://mobile.51cto.com/android/">Android</a> | <a href="http://mobile.51cto.com/iphone/">iOS</a> | <a href="http://mobile.51cto.com/windows-phone/">Windows Phone</a> | <a href="http://mobile.51cto.com/blackberry/">BlackBerry</a> | <a href="http://mobile.51cto.com/webos/">webOS</a> | <a href="http://mobile.51cto.com/symbian/">Symbian</a> | <a href="http://mobile.51cto.com/bada/">bada</a> | <a href="http://mobile.51cto.com/ophone/">OPhone</a> | <a href="http://mobile.51cto.com/others/" target="_blank">其他</a></div>  
+<div class="search fr">
+<dl>
+<form name="searchform" action="http://www.51cto.com/php/search.php" target="_blank" method="post" style="margin:0px; padding:0px;">
+<dt class="fl"><input name="keyword" type="text" class="searchInput f14 input" value="请输入关键字" onfocus="doempty(this, &#39;请输入关键字&#39;);" onblur="doempty(this, &#39;请输入关键字&#39;);"></dt>
+<dd class="fl"><input type="image" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/search.gif"></dd></form>
+</dl>
+</div>
+<br class="dle">
+</div>
+<div class="g_39 b3-s-4273B3 rel">
+<!--width : 26*25 - 15 = 635px-->
+<div class="g_26 fl m_l">
+<div class="brief bgF8F8F8">
+<p class="crumb ">您所在的位置：<a href="http://mobile.51cto.com/"><b>移动开发</b></a> &gt; <a href="http://mobile.51cto.com/android/"><b>Android</b></a> &gt; <a href="http://mobile.51cto.com/aengine/"><b>工具&amp;引擎</b></a> &gt;  <b>最火Android模拟神器Genymotion之Eclipse插件安装过程</b> </p>
+<h1>最火Android模拟神器Genymotion之Eclipse插件安装过程</h1>
+<div class="msg">
+<div>2013-07-25 15:34  核子可乐译  51cto <span class="f12-a"><a href="http://mobile.51cto.com/aengine-404920.htm#commment" target="_self">我要评论(<span id="pinglun_1"><script language="JavaScript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/getArtCount.php"></script>0</span>)</a></span> 字号：<span class="f14-b"><a href="javascript:setfont(12);" target="_self">T</a></span> | <span class="f16-b"><a href="javascript:setfont(16);" target="_self">T</a></span></div>
+<div class="artHd" id="books" style="padding:5px 25px;display:none;"><script language="JavaScript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/getBookData.php"></script></div>
+<div class="fav"><a href="javascript:favorBox('open');" title="一键收藏，随时查看，分享好友！" target="_self"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/Fav.gif" alt="一键收藏，随时查看，分享好友！" border="0"></a></div>
+</div>
+<div class="brieftext">
+<p class="f14 green">Genymotion最有趣的一项功能就是允许用户测试自己利用Eclipse IDE开发出的应用程序。它利用ADB与任何活动Genymotion虚拟设备连接，并以此为基础进行应用程序推送。</p>
+<p class="ad">AD：<script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/keywords_ad_new.js"></script><a href="http://wot.51cto.com/cloud2013/" target="_blank" style="text-decoration: none;">2013云计算架构师峰会超低价抢票中</a>
+</p>
+</div>
+</div>
+<div class="tag bgF8F8F8" id="indexlist" style="display:none;">
+<ul id="indexliststr">
+</ul>
+<br class="dle">
+</div>
+<div class="content bgF8F8F8 f14">
+<div id="content">
+<p></p><h2 style="text-align: center;"><img class="fit-image" onload="javascript:if(this.width&gt;498)this.width=498;" onmousewheel="javascript:return big(this)" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/231036t9mjmms2gampjssz.jpg" alt="" width="498"></h2>
+<p><strong>我们都知道模拟器都需要安装插件，以便来完善模拟器的各个功能项，同样Genymotion也需要安装一些插件来增加功能，对于Genymotion插件的安装其实并不复杂，总共有两种安装方式供大家选择，一种是通过更新网站来完成，另一种是手动的方式，</strong><strong>其中还包含了在Genymotion上运行项目的操作，</strong><strong>相比较你更喜欢哪一种方式的安装呢，可以根据你个人的习惯来完成，下面将更加详细的为你介绍。</strong></p>
+<h2><span style="color: rgb(0, 204, 255);">插件安装</span></h2>
+<p>插件的安装方式分为两种：</p>
+<p><strong>1.更新网站方式</strong></p>
+<p>启动Eclipse</p>
+<p>打开“帮助/安装新软件……”菜单</p>
+<p>在新开启的窗口中点击“添加……”按钮（位于窗口右上方）</p>
+<p>在输入区中填写以下内容，然后进行验证：</p>
+<p>Name: Genymobile</p>
+<p>Location: http://plugins.genymotion.com/eclipse</p>
+<p>您应该会看到Genymobile</p>
+<p>检查这些条目，确实无误后点击“下一步”</p>
+<p>阅读并接受许可</p>
+<p>Eclipse会提醒您该插件没有签名，接受并继续</p>
+<p>完成安装，重新启动Eclipse</p>
+<p>在Eclipse重新启动完成后，您将在工具栏中看到新的按钮:</p>
+<p>最后，您可以检查安装是否成功：打开“帮助/关于”菜单，点击“安装信息”按钮。在“插件”栏中Genymotion应该显示出所有已经安装的插件</p>
+<p><strong>2.手动方式</strong></p>
+<p>确保Eclipse已经关闭</p>
+<p>点击此处进入Genymotion插件官方下载页面</p>
+<p>根据系统类别的不同，遵循以下步骤：</p>
+<p><strong>Windows</strong></p>
+<p>如果您已经拥有管理员权限，请将jar文件旋转在Eclipse安装目录下的plugins子目录当中</p>
+<p>如果您未获得管理员权限，请将jar文件放在Local Settings\Eclipse下的plugins目录当中</p>
+<p><strong>Mac OS X</strong></p>
+<p>如果您拥有管理员权限，请将jar文件放置在Eclipse安装目录的plugins子目录当中</p>
+<p><strong>Linux</strong></p>
+<p>如果您拥有管理员权限，请将jar文件放置在Eclipse安装目录的plugins子目录当中</p>
+<p>如果您未获得管理员权限，请将jar文件放在 /home/[user]/Eclipse下的plugins目录当中</p>
+<p><strong>插件使用</strong></p>
+<p>在Eclipse工具栏中点击 图标打开插件</p>
+<p><strong>首次启动</strong></p>
+<p>1.您需要为Genymotion安装目录设定路径（因为默认路径只对Genymobile标准安装生效）：</p>
+<p></p>
+<p style="text-align: center;"><a target="_blank" href="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wKioJlHw2SKTU8niAABOFeHAHBQ958.jpg"><img class="fit-image" onload="javascript:if(this.width&gt;498)this.width=498;" onmousewheel="javascript:return big(this)" width="488" border="0" height="426" alt="" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wKioJlHw2SKTU8niAABOFeHAHBQ958.jpg"></a></p>
+<p>Windows:<span style="color: rgb(255, 153, 0);"> C:\Program Files\Genymobile\Genymotion</span></p>
+<p>MacOS X: <span style="color: rgb(255, 153, 0);">/Applications/Genymotion.app</span></p>
+<p>Linux: <span style="color: rgb(255, 153, 0);">/home/[user]/genymotion</span></p>
+<p>2.点击“应用”，然后点击“好的”</p>
+<p>3.再次点击 开启插件窗口</p>
+<p></p>
+<p style="text-align: center;"><a href="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wKioJlHw2SLChjyFAABpJ91ZWF0750.jpg" target="_blank"><img class="fit-image" onload="javascript:if(this.width&gt;498)this.width=498;" onmousewheel="javascript:return big(this)" width="488" border="0" height="293" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wKioJlHw2SLChjyFAABpJ91ZWF0750.jpg" alt=""></a></p>
+<h2><span style="color: rgb(0, 204, 255);">操作</span></h2>
+<p>在插件主窗口中，您可以执行以下步骤：</p>
+<p>1.启动Genymotion虚拟设备</p>
+<p>2.创建新的Genymotion虚拟设备</p>
+<p>3.刷新Genymotion虚拟设备列表</p>
+<p>“创建”操作会在启动Genymotion创建向导后自动进行</p>
+<p><strong>虚拟设备状态</strong></p>
+<p>主窗口中的“状态”列会显示以下几种状态：</p>
+<p>关闭: 该虚拟设备正处于关闭状态</p>
+<p>暂停: 该虚拟设备已经启动并被暂停：重启之后设备仍将再次进入暂停状态</p>
+<p>开启: 该虚拟设备正处于开启状态，但并未连接到ADB。这意味着您无法在ADT插件的“Android设备选择器”窗口中选择该虚拟设备</p>
+<p>已连接: 该虚拟设备正处于开启状态并已连接至ADB。这意味着该虚拟设备可通过ADT插件的“Android设备选择器”窗口中被选中</p>
+<p><strong>利用Genymotion运行Android应用程序</strong></p>
+<p>1.首先，点击 来启动或者创建您要使用的虚拟机。</p>
+<p>2.关闭Genymotion主窗口。</p>
+<p>3.右键点击您的应用程序项目并选择“作为Android应用程序运行”。</p>
+<p>4.Android设备选择器”将开启。</p>
+<p>5.点击您所启动/创建的Genymotion虚拟设备。</p>
+<p><span style="color: rgb(255, 153, 0);">Genymotion-VMNAME-@IP:PORT</span></p>
+<p>其中：</p>
+<p><span style="color: rgb(255, 102, 0);">VMNAME</span>代表虚拟设备名称，由Genymotion定义</p>
+<p><span style="color: rgb(255, 102, 0);">@IP:PORT</span>代表设备地址与商品（由ADB指派）</p>
+<p><span style="color: rgb(255, 0, 0);">Genymotion虚拟设备在重新启动或者被意外中止后，其在“Android设备选择器”窗口中显示的名称会出现错误。关闭并重启Genymotion插件即可修复这个问题。</span></p>
+<p><strong>错误处理</strong></p>
+<p>在Genymotion插件窗口开启时，错误会被输出至Eclipse控制台。</p>
+<p>【编辑推荐】</p>
+<div>
+<ol>
+    <li><a href="http://mobile.51cto.com/aengine-404893.htm" target="_blank">最火Android模拟神器Genymotion之“一见钟情”</a></li>
+    <li><a href="http://mobile.51cto.com/aengine-404901.htm" target="_blank">最火Android模拟神器Genymotion之运行操作</a></li>
+    <li><a href="http://mobile.51cto.com/aengine-404905.htm" target="_blank">最火Android模拟神器Genymotion之安装过程详解</a></li>
+    <li><a href="http://mobile.51cto.com/aengine-404912.htm" target="_blank">最火Android模拟神器Genymotion之运行模拟器</a></li>
+    <li><a href="http://mobile.51cto.com/aengine-404917.htm" target="_blank">最火Android模拟神器Genymotion之应用程序详解</a></li>
+</ol>
+</div>
+<div align="right">【责任编辑：<a class="ln" href="mailto:zhangyq@51cto.com">张叶青</a> TEL：（010）68476606】</div><br> 
+<p class="blank10"></p> 
+ 
+ 
+
+<p class="blank10"></p>
+<div class="f12"> <span class="fl">原文：<a href="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM.htm" class="blue"><b>最火Android模拟神器Genymotion之Eclipse插件安装过程</b></a></span> <span class="fr"><a href="http://mobile.51cto.com/">返回移动开发首页</a></span> </div>
+<p class="blank1"></p>
+</div>
+<iframe width="600" scrolling="no" height="239" frameborder="0" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/bulkfollow.htm"></iframe>
+<div class="tips">
+<div style="float:left;">
+<span style="float:left; margin-top:4px;">分享到：</span>
+<!-- Baidu Button BEGIN -->
+    <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare" style="margin-right:5px; float:left;">
+        <a class="bds_qzone" title="分享到QQ空间" href="http://mobile.51cto.com/aengine-404920.htm#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="http://mobile.51cto.com/aengine-404920.htm#"></a>
+        <a class="bds_tqq" title="分享到腾讯微博" href="http://mobile.51cto.com/aengine-404920.htm#"></a>
+        <a class="bds_renren" title="分享到人人网" href="http://mobile.51cto.com/aengine-404920.htm#"></a>
+        <a class="bds_t163" title="分享到网易微博" href="http://mobile.51cto.com/aengine-404920.htm#"></a>
+        <span class="bds_more"></span>
+		<a class="shareCount" href="http://mobile.51cto.com/aengine-404920.htm#" title="累计分享0次">0</a>
+
+</div>
+<!--<div class="fl"> 
+    </div>
+--><script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=585532" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/bds_s_v2.js"></script>
+
+<script type="text/javascript">
+	var bds_config = {'snsKey':{'tsina':'2378297317'}};
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+</script>
+<!-- Baidu Button END -->
+
+
+
+</div><div class="fr blue"><a href="javascript:AddFavorite(document.location.href,document.title);" target="_self">收藏</a>|<a href="javascript:window.print();" target="_self">打印</a>|<a id="msnqqcopy" title="分享本资源给好友" target="_self">复制</a></div>
+</div>
+</div>
+<!--内容 end-->
+<div class="topbiaoqing">
+<div class="biaoqing fixfloat pad">
+<ul>
+<li><a href="javascript:getcountscom(404920,1)" target="_self"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/bq1.jpg"></a>
+<div><a href="javascript:getcountscom(404920,1)" target="_self">给力</a></div>
+<span id="404920_1">(0票)</span></li>
+<li><a href="javascript:getcountscom(404920,2)" target="_self"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/bq2.jpg"></a>
+<div><a href="javascript:getcountscom(404920,2)" target="_self">动心</a></div>
+<span id="404920_2">(0票)</span></li>
+<li><a href="javascript:getcountscom(404920,3)" target="_self"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/bq3.jpg"></a>
+<div><a href="javascript:getcountscom(404920,3)" target="_self">废话</a></div>
+<span id="404920_3">(0票)</span></li>
+<li><a href="javascript:getcountscom(404920,4)" target="_self"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/bq4.jpg"></a>
+<div><a href="javascript:getcountscom(404920,4)" target="_self">专业</a></div>
+<span id="404920_4">(0票)</span></li>
+<li><a href="javascript:getcountscom(404920,5)" target="_self"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/bq5.jpg"></a>
+<div><a href="javascript:getcountscom(404920,5)" target="_self">标题党</a></div>
+<span id="404920_5">(0票)</span></li>
+<li><a href="javascript:getcountscom(404920,6)" target="_self"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/bq6.jpg"></a>
+<div><a href="javascript:getcountscom(404920,6)" target="_self">路过</a></div>
+<span id="404920_6">(0票)</span></li>
+</ul>
+</div>
+<script language="javascript"> 
+getcountscom(404920,11);
+
+</script>
+</div>
+<p class="blank10"></p>
+<div class="bor">
+<div class="titbg pl15">关于<a href="http://www.51cto.com/php/search.php?keyword=Android" target="_blank" class="underline">Android</a>&nbsp;&nbsp;<a href="http://www.51cto.com/php/search.php?keyword=%C4%A3%C4%E2%C6%F7" target="_blank" class="underline">模拟器</a>&nbsp;&nbsp;<a href="http://www.51cto.com/php/search.php?keyword=Genymotion" target="_blank" class="underline">Genymotion</a>&nbsp;&nbsp;<a href="http://www.51cto.com/php/search.php?keyword=%B2%E5%BC%FE" target="_blank" class="underline">插件</a>的更多文章</div>
+<div class="reltag">
+<ul class="fl list02">
+  <li><a href="http://mobile.51cto.com/aengine-404923.htm" title="最火Android模拟神器Genymotion之shell命令运用详解">最火Android模拟神器Genymotion之shell命令</a></li><li><a href="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM.htm" title="最火Android模拟神器Genymotion之Eclipse插件安装过程">最火Android模拟神器Genymotion之Eclipse插</a></li><li><a href="http://mobile.51cto.com/aengine-404917.htm" title="最火Android模拟神器Genymotion之应用程序详解">最火Android模拟神器Genymotion之应用程序</a></li><li><a href="http://mobile.51cto.com/aengine-404912.htm" title="最火Android模拟神器Genymotion之运行模拟器">最火Android模拟神器Genymotion之运行模拟</a></li><li><a href="http://mobile.51cto.com/aengine-404901.htm" title="最火Android模拟神器Genymotion之运行操作">最火Android模拟神器Genymotion之运行操作</a></li>
+</ul>
+<div class="fr">
+<div class="h5 f12"><a href="http://book.51cto.com/art/201307/405003.htm" title="Android 超级用户工具箱"><b>Android 超级用户工具箱</b></a></div>
+<a href="http://book.51cto.com/art/201307/405003.htm" title="Android 超级用户工具箱"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wKioJlHx8C6RhKjFAAAgz4SOv6U415.gif" alt="Android 超级用户工具箱" width="100" height="80" border="0"></a>
+<p class="c666">本书由XDA专家编写，除介绍Android及移动设备基本知识外，还提供<a class="blue" href="http://book.51cto.com/art/201307/405003.htm" title="Android 超级用户工具箱">[详细]</a></p>
+</div>
+</div>
+<!--reltag end-->
+</div>
+<p class="blank10"></p>
+<div class="bor">
+<div class="f14 comm">
+<h3 class="fl">网友评论<em>TOP5</em></h3>
+<span class="fr"> <a href="http://www.51cto.com/php/feedbackt.php?id=404920">查看所有评论（<span id="pinglun_2"><script language="JavaScript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/getArtCount.php"></script>0</span>）</a></span> </div>
+<p class="blank1"></p>
+<div class="blank1"></div>
+<ul class="commlist">
+<script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/artcomment1105.php"></script>
+</ul>
+<div class="txt bgF8F8F8">
+<a name="commment"></a>
+<dl>
+<dt class="fl tlt">提交评论</dt>
+<dd><script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/authart.php"></script><form action="http://www.51cto.com/login.php?referer=http://mobile.51cto.com/aengine-404920.htm" method="post" style="padding:0px;margin:0px" target="_self">通行证：<input name="username" size="10" type="text">&nbsp;密码：<input name="password" type="password" size="10"><input name="username2" class="test1" type="hidden" value="">&nbsp;<input type="submit" name="Submit" value="登录">&nbsp;&nbsp;<a href="http://ucenter.51cto.com/reg_01.php">注册通行证</a></form><form action="http://www.51cto.com/php/sendfeedback.php" method="post" name="feedback" id="feedback" onsubmit="return commentSubmit(this)" style="padding:0px;margin:0px" target="_self"><input type="hidden" name="referer" value="http://mobile.51cto.com/aengine-404920.htm"><input name="username" type="hidden" value=""><input name="uid" class="test1" type="hidden" value="">
+<br>
+</form></dd>
+
+</dl>
+	 <script type="text/javascript" language="javascript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/nomal_k.php"></script><textarea class="txtinput" name="msg" id="msg" style="height: 88px;"></textarea><br><table width="99%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td height="6" colspan="6"><input type="hidden" name="artID" value="404920"><input type="hidden" name="referer" value="http://mobile.51cto.com/aengine-404920.htm"><input type="hidden" name="quick" value="0"><input type="hidden" name="author2" value="51CTO网友"></td></tr><tr><td width="9%">验证码：</td><td width="11%"><input name="authnum" onclick="displaysecunum();" type="text" class="test3"></td><td width="51%"><img id="secunum" style="vertical-align:middle;" onclick="refimg()"><span style="display:none;" id="spanfont">点击图片可刷新验证码</span><span style="display:inline;" id="clickfont">请点击后输入验证码</span></td><td width="4%"><input name="nouser" type="checkbox" value="1" onclick="author2username2()"></td><td width="12%">匿名发表</td><td width="13%"><input type="submit" style="background: url(&quot;http://www.51cto.com/php/tijiao.gif&quot;) no-repeat scroll 0% 0% transparent;cursor: pointer; height: 30px; width: 80px;" name="Submit32" value=""></td></tr><tr><td height="6" colspan="6"></td></tr></tbody></table>
+	
+</div>
+</div>
+<!--box end-->
+<p class="blank10"></p>
+<div class="relart fl bor">
+<div class="titbg">
+<h3 class="fl t1">栏目热门</h3>
+<a href="http://mobile.51cto.com/col/1621/click1.htm" class="tmore">更多&gt;&gt;</a></div>
+<ul>
+  
+	  <li><a href="http://mobile.51cto.com/aengine-399042.htm" title="Cocostudio试用手记：数据编辑器和UI编辑器">Cocostudio试用手记：数据编辑器和UI编辑器</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/aengine-399044.htm" title="CocoStudio视频教程系列">CocoStudio视频教程系列</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/aengine-399040.htm" title="CocoStudio工具集开发入门之UI编辑器教程">CocoStudio工具集开发入门之UI编辑器教程</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/aengine-396837.htm" title="Cocos2D-X项目中添加CocoStudio模块">Cocos2D-X项目中添加CocoStudio模块</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/aengine-399041.htm" title="CocoStudio工具集开发入门之动画编辑器教程">CocoStudio工具集开发入门之动画编辑器教程</a></li>
+	  
+</ul>
+</div>
+<div class="cathot fr bor">
+<div class="titbg">
+<h3 class="fl t1">同期最新</h3>
+<a href="http://mobile.51cto.com/col/1621" class="tmore">更多&gt;&gt;</a></div>
+<ul>
+	
+	  <li><a href="http://mobile.51cto.com/aengine-404917.htm" title="最火Android模拟神器Genymotion之应用程序详解">最火Android模拟神器Genymotion之应用程序</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/aengine-404912.htm" title="最火Android模拟神器Genymotion之运行模拟器">最火Android模拟神器Genymotion之运行模拟</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/aengine-404905.htm" title="最火Android模拟神器Genymotion之安装过程详解">最火Android模拟神器Genymotion之安装过程</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/aengine-404901.htm" title="最火Android模拟神器Genymotion之运行操作">最火Android模拟神器Genymotion之运行操作</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/aengine-404893.htm" title="最火Android模拟神器Genymotion之“一见钟情”">最火Android模拟神器Genymotion之“一见钟</a></li>
+	  
+</ul>
+</div>
+<p class="blank10"></p>
+<div class="bor">
+<div class="titbg">
+<h3 class="fl t1"><a href="http://mobile.51cto.com/">移动开发</a></h3>
+<span class="pl10">频道导航</span></div>
+ <ul class="xtlist">
+<li><span class="tit">平台</span>
+<div><a href="http://mobile.51cto.com/web/">移动Web</a>|<a href="http://mobile.51cto.com/android/">Android</a>|<a href="http://mobile.51cto.com/iphone/">iOS</a>|<a href="http://mobile.51cto.com/windows-phone/">Windows Phone</a></div>
+</li>
+
+<li><span class="tit">应用</span>
+<div><a href="http://mobile.51cto.com/app-show/">移动应用</a>|<a href="http://mobile.51cto.com/team/">移动团队</a>|<a href="http://mobile.51cto.com/market/">应用商店</a>|<a href="http://mobile.51cto.com/speclist/">专题汇总</a>|<a href="http://mobile.51cto.com/1603/">Phone Club</a></div>
+</li>
+
+<li><span class="tit">观察</span>
+<div><a href="http://mobile.51cto.com/comment/">业界观察</a>|<a href="http://mobile.51cto.com/data/">调查数据</a>|<a href="http://mobile.51cto.com/informatization/">移动信息化</a></div>
+</li>
+
+<li class="last"><span class="tit">Android</span>
+<div><a href="http://mobile.51cto.com/ahot/">热点</a>|<a href="http://mobile.51cto.com/anews/">资讯</a>|<a href="http://mobile.51cto.com/android/abased/">基础</a>|<a href="http://mobile.51cto.com/android/amedia/">多媒体</a>|<a href="http://mobile.51cto.com/android/adatabase/">数据库</a>|<a href="http://mobile.51cto.com/android/design/">设计</a>|<a href="http://mobile.51cto.com/android/aengine/">工具</a>|<a href="http://mobile.51cto.com/android/aprogram/">编译</a></div>
+</li>
+</ul> 
+</div> 
+<p class="blank10"></p>
+<div class="leftbotcon">
+<div class="bor jdlist">
+<div class="titbg">
+<h3 class="t2">热点推荐</h3></div>
+<ul>
+<li><a onclick="javascript: _gaq.push([&#39;_trackPageview&#39;, &#39;/51cto/neirong/d-t-4&#39;]);" href="http://mobile.51cto.com/mobile-182392.htm"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/153546162.jpg"></a> 
+<div class="name"><a onclick="javascript: _gaq.push([&#39;_trackPageview&#39;, &#39;/51cto/neirong/d-t-4&#39;]);" href="http://mobile.51cto.com/mobile-182392.htm">Android开发应用详解</a></div></li>
+<li><a onclick="javascript: _gaq.push([&#39;_trackPageview&#39;, &#39;/51cto/neirong/d-t-4&#39;]);" href="http://developer.51cto.com/art/201106/266369.htm"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/133620622.jpg"></a> 
+<div class="name"><a onclick="javascript: _gaq.push([&#39;_trackPageview&#39;, &#39;/51cto/neirong/d-t-4&#39;]);" href="http://developer.51cto.com/art/201106/266369.htm">那些性感的让人尖叫的程序员</a></div></li>
+<li><a href="http://developer.51cto.com/art/200907/133407.htm"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/134217922.jpg"></a> 
+<div class="name"><a href="http://developer.51cto.com/art/200907/133407.htm">HTML5 下一代Web开发标准详解</a></div></li>
+<li><a href="http://developer.51cto.com/art/201104/257581.htm"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/123123954.jpg"></a> 
+<div class="name"><a href="http://developer.51cto.com/art/201104/257581.htm">高性能WEB开发应用指南</a></div></li>
+<li><a href="http://os.51cto.com/art/200706/49181.htm"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/195816929.jpg"></a> 
+<div class="name"><a href="http://os.51cto.com/art/200706/49181.htm">Ubuntu开源技术交流频道</a></div></li></ul></div>
+<p class="blank10"></p>
+<div class="bor hotTag"><strong>热门标签：</strong> <a onclick="javascript: _gaq.push([&#39;_trackPageview&#39;, &#39;/51cto/neirong/d-2]);" href="http://os.51cto.com/windows/">windows频道</a><a onclick="javascript: _gaq.push([&#39;_trackPageview&#39;, &#39;/51cto/neirong/d-w&#39;]);" href="http://mobile.51cto.com/">移动开发</a><a onclick="javascript: _gaq.push([&#39;_trackPageview&#39;, &#39;/51cto/neirong/d-w&#39;]);" href="http://cloud.51cto.com/">云计算</a><a onclick="javascript: _gaq.push([&#39;_trackPageview&#39;, &#39;/51cto/neirong/d-w&#39;]);" href="http://mobile.51cto.com/mobile/objc/">objective-c</a><a onclick="javascript: _gaq.push([&#39;_trackPageview&#39;, &#39;/51cto/neirong/d-w&#39;]);" href="http://network.51cto.com/art/200909/151122.htm">tp-link路由器设置图解</a><a onclick="javascript: _gaq.push([&#39;_trackPageview&#39;, &#39;/51cto/neirong/d-w&#39;]);" href="http://developer.51cto.com/art/200907/133407.htm">html5</a> </div></div>
+<div class="leftbotbox"> </div>
+</div>
+<!--left end-->
+<div class="g_13 fr">
+<div class="focus fixfloat"> 
+ <img width="298" style="border: 1px solid #CCCCCC; margin:5px 0px 5px;" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/weixin.png"><div class="hot">
+<ul>
+<li class="tit"><em>专题</em> <a href="http://mobile.51cto.com/exp/Push2013/index.html">云推送移动互联网的太极推手</a> </li>
+<li class="con"><dl><dt><a href="http://mobile.51cto.com/exp/Push2013/index.html"><img border="0" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wKioOVHsxF-gUATqAAApioMlGJQ755.jpg"></a></dt>
+<dd>本专题将会为各位读者详细介绍云Push技术，并且向大家推介部分有实力的云Push服务提供商。</dd>
+</dl></li></ul><ol class="hotlist"><li><a href="http://mobile.51cto.com/exp/conf2013a/index.html">2013上半年移动互联网大会回顾</a></li><li><a href="http://mobile.51cto.com/exp/cocostudio/index.html">手游开发神器：CocoStudio工具集</a></li></ol></div>
+<p>
+<script language="JavaScript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/ad(1).js" type="text/javascript"></script><script type="text/javascript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/ad(2).php"></script><iframe width="300" height="260" noresize="" scrolling="No" frameborder="0" marginheight="0" marginwidth="0" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/14.htm" align="left"></iframe>
+</p>
+</div>
+<div class="rank">
+<div class="tlt">
+      <h3>文章排行</h3>
+      <a onmouseover="change_top10(3);" id="top_3">本月</a><a onmouseover="change_top10(2);" id="top_2">本周</a><a onmouseover="change_top10(1);" class="myon" id="top_1">24小时</a> </div>
+ <div id="top10_1" style="display: block;" class="list"><ul>
+<li><a href="http://mobile.51cto.com/android-227548.htm" target="_blank" title="在Eclipse下搭建Android开发环境教程">在Eclipse下搭建Android开发环境教程</a>
+</li><li><a href="http://mobile.51cto.com/design-250037.htm" target="_blank" title="21个免费的UI界面设计工具、资源及网站">21个免费的UI界面设计工具、资源及网站</a>
+</li><li><a href="http://mobile.51cto.com/hot-292923.htm" target="_blank" title="人人都是开发者：5款傻瓜式APP开发工具">人人都是开发者：5款傻瓜式APP开发工具</a>
+</li><li><a href="http://mobile.51cto.com/comment-386954.htm" target="_blank" title="微信公众平台：功能强大的自定义菜单">微信公众平台：功能强大的自定义菜单</a>
+</li><li><a href="http://mobile.51cto.com/web-321954.htm" target="_blank" title="jQuery Mobile中文手册：开发入门">jQuery Mobile中文手册：开发入门</a>
+</li><li><a href="http://mobile.51cto.com/android-331742.htm" target="_blank" title="Android 4.0.4模拟器安装完全教程（图">Android 4.0.4模拟器安装完全教程（图</a>
+</li><li><a href="http://mobile.51cto.com/android-222812.htm" target="_blank" title="图文并茂 在MyEclipse 8.6上搭建Androi">图文并茂 在MyEclipse 8.6上搭建Androi</a>
+</li><li><a href="http://mobile.51cto.com/web-321296.htm" target="_blank" title="三大移动Web开发框架哪个适合你？">三大移动Web开发框架哪个适合你？</a>
+</li><li><a href="http://mobile.51cto.com/hot-276160.htm" target="_blank" title="jQuery Mobile高手必备的十大技巧和代">jQuery Mobile高手必备的十大技巧和代</a>
+</li><li><a href="http://mobile.51cto.com/iphone-330533.htm" target="_blank" title="Cocos2D-X SimpleGame &amp; 初学者教程">Cocos2D-X SimpleGame &amp; 初学者教程</a>
+</li></ul></div>
+<div id="top10_2" style="display: none;" class="list"><ul>
+<li><a href="http://mobile.51cto.com/hot-405433.htm" target="_blank" title="买搜狗 百度不急 360急 张朝阳笑而不语">买搜狗 百度不急 360急 张朝阳笑而不语</a>
+</li><li><a href="http://mobile.51cto.com/ahot-405443.htm" target="_blank" title="开发者注意 Android 4.3以后不再需要ro">开发者注意 Android 4.3以后不再需要ro</a>
+</li><li><a href="http://mobile.51cto.com/app-show-405585.htm" target="_blank" title="手机游戏营销的黄金法则">手机游戏营销的黄金法则</a>
+</li><li><a href="http://mobile.51cto.com/news-405861.htm" target="_blank" title="HTML5与原生App之争 胜负已出？">HTML5与原生App之争 胜负已出？</a>
+</li><li><a href="http://mobile.51cto.com/hot-405461.htm" target="_blank" title="下一个Google杀手在哪里诞生？答案只有">下一个Google杀手在哪里诞生？答案只有</a>
+</li><li><a href="http://mobile.51cto.com/anews-405589.htm" target="_blank" title="央视曝光十大恶意手机应用 看看你中招">央视曝光十大恶意手机应用 看看你中招</a>
+</li><li><a href="http://mobile.51cto.com/informatization-405555.htm" target="_blank" title="BYOD：移动安全的演变之路">BYOD：移动安全的演变之路</a>
+</li><li><a href="http://mobile.51cto.com/comment-405919.htm" target="_blank" title="从Waze被收购看谷歌与苹果的地图领域之">从Waze被收购看谷歌与苹果的地图领域之</a>
+</li><li><a href="http://mobile.51cto.com/hot-405628.htm" target="_blank" title="看电信运营商与超级App之间的流量生意">看电信运营商与超级App之间的流量生意</a>
+</li><li><a href="http://mobile.51cto.com/news-405868.htm" target="_blank" title="移动互联网给你的几点思考">移动互联网给你的几点思考</a>
+</li></ul></div>
+<div id="top10_3" style="display: none;" class="list"><ul>
+<li><a href="http://mobile.51cto.com/hot-402484.htm" target="_blank" title="你真的认为iPhone只是一部手机？透露苹">你真的认为iPhone只是一部手机？透露苹</a>
+</li><li><a href="http://mobile.51cto.com/team-403714.htm" target="_blank" title="28岁创业者：1000万美金卖出应用的秘诀">28岁创业者：1000万美金卖出应用的秘诀</a>
+</li><li><a href="http://mobile.51cto.com/news-403084.htm" target="_blank" title="百度移动 19亿美元的短板">百度移动 19亿美元的短板</a>
+</li><li><a href="http://mobile.51cto.com/hot-402260.htm" target="_blank" title="2013中国开发者大会·广州 PPT全集下载">2013中国开发者大会·广州 PPT全集下载</a>
+</li><li><a href="http://mobile.51cto.com/team-403349.htm" target="_blank" title="专访蔡文胜：移动互联网创业别再单干了">专访蔡文胜：移动互联网创业别再单干了</a>
+</li><li><a href="http://mobile.51cto.com/aengine-404905.htm" target="_blank" title="最火Android模拟神器Genymotion之安装">最火Android模拟神器Genymotion之安装</a>
+</li><li><a href="http://mobile.51cto.com/comment-404667.htm" target="_blank" title="苹果多事之秋：网站宕机 盗号刷榜 收入">苹果多事之秋：网站宕机 盗号刷榜 收入</a>
+</li><li><a href="http://mobile.51cto.com/hot-403188.htm" target="_blank" title="开发者眼中的Android与Windows Phone平">开发者眼中的Android与Windows Phone平</a>
+</li><li><a href="http://mobile.51cto.com/team-403339.htm" target="_blank" title="杭州手游团队生存状态一览：一夜暴富与">杭州手游团队生存状态一览：一夜暴富与</a>
+</li><li><a href="http://mobile.51cto.com/informatization-404598.htm" target="_blank" title="IT部门该如何管理Android碎片化难题？">IT部门该如何管理Android碎片化难题？</a>
+</li></ul></div>
+ 
+ </div>
+<p class="blank1"></p>
+
+<div class="bor">
+<div class="titbg">
+<h3 class="fl t1">热点专题</h3>
+<a href="http://mobile.51cto.com/col/1621/spec1.htm" class="tmore">更多&gt;&gt;</a></div>
+<ul class="plist01">
+<li><a href="http://mobile.51cto.com/iphone-397344.htm" title="苹果WWDC2013全球开发者大会"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wKioJlGvAVSjwbgFAAAm_A178sQ973.jpg" alt="苹果WWDC2013全球开发者大会" width="100" height="80"></a>
+<h5><a href="http://mobile.51cto.com/iphone-397344.htm" title="苹果WWDC2013全球开发者大会">苹果WWDC2013全球开发</a></h5>
+<div class="c666">WWDC 2013年苹果全球开发者大会于6月10日-14日在旧金</div>
+</li><li><a href="http://mobile.51cto.com/design-397213.htm" title="Android Design：第三大移动设计风格"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wKioOVGtpjmBNu78AAAk11xp09U557.jpg" alt="Android Design：第三大移动设计风格" width="100" height="80"></a>
+<h5><a href="http://mobile.51cto.com/design-397213.htm" title="Android Design：第三大移动设计风格">Android Design：第三</a></h5>
+<div class="c666">最近Google Play 4.0的大改版、Google Glass UI——Ti</div>
+</li><li><a href="http://mobile.51cto.com/news-396580.htm" title="D11大会：畅谈互联网未来"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wKioOVGnXcnBmzgwAAAjc2Ug5iI826.jpg" alt="D11大会：畅谈互联网未来" width="100" height="80"></a>
+<h5><a href="http://mobile.51cto.com/news-396580.htm" title="D11大会：畅谈互联网未来">D11大会：畅谈互联网</a></h5>
+<div class="c666">D11是由华尔街日报旗下知名科技博客AllThingsD主办。</div>
+</li> 
+</ul>
+</div>
+<p class="blank10"></p>
+<div class="tagCloud">
+<div class="tlt">
+<h3>热点标签</h3>
+</div>
+<div class="taglist"><a title="iOS开发" href="http://mobile.51cto.com/mobile/objc/">iOS开发</a>  <a title="Android开发" href="http://mobile.51cto.com/mobile-182392.htm">Android开发</a> <a title="Symbian开发" href="http://mobile.51cto.com/mobile-220581.htm">Symbian开发</a>  <a title="MeeGo开发" href="http://mobile.51cto.com/meego-208013.htm">MeeGo开发</a>  <a title="BlackBerry开发" href="http://mobile.51cto.com/blackberry-255350.htm">BlackBerry开发</a>  <a title="Windows Phone开发" href="http://mobile.51cto.com/mobile-219051.htm">Windows Phone开发</a>  <a title="Phone Club" href="http://mobile.51cto.com/1603/">Phone Club</a>  <a title="Android 4.0" href="http://mobile.51cto.com/android-297987.htm" class="imp">Android 4.0</a>  <a title="webOS 3.0" href="http://mobile.51cto.com/webos-256291.htm">webOS 3.0</a>  <a title="智能手机" href="http://www.linkphone.cn/">智能手机</a> <a title="软件下载" href="http://download.linkphone.cn/">软件下载</a> </div>
+</div>
+<div class="rss">
+<ul>
+<li class="lin f12-c"><a href="http://news.51cto.com/col/1323/"><strong>点击这里查看样刊</strong></a></li>
+<li>
+<dl>
+<dt> </dt>
+<dd><a href="http://home.51cto.com/index.php?s=/Subscribe"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/dingy.gif"></a></dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="bor">
+<div class="titbg">
+<h3 class="t1">全站热点</h3>
+</div>
+<div class="webhot fixfloat">
+<ul>
+
+<li>
+  <a href="http://netsecurity.51cto.com/secu/qiming/waf2013/" title="重启万兆环境下的WEB防护新思路"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wKioOVHSSNjiAsfuAAAWjl8-ooE882.jpg"></a>
+  <div><a href="http://netsecurity.51cto.com/secu/qiming/waf2013/" title="重启万兆环境下的WEB防护新思路">重启万兆环境下的WEB防护新思路</a></div>
+</li>
+
+<li>
+  <a href="http://os.51cto.com/art/201306/401296.htm" title="《Linux运维趋势》2013年6月号"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wKioOVHOR4iBKFamAAAS0uS9NXE906.jpg"></a>
+  <div><a href="http://os.51cto.com/art/201306/401296.htm" title="《Linux运维趋势》2013年6月号">《Linux运维趋势》2013年6月号</a></div>
+</li>
+
+</ul>
+</div>
+<p class="blank1"></p>
+<ul class="list03">
+
+</ul>
+</div>
+<p class="blank10"></p>
+<div class="bor">
+<div class="titbg">
+<h3 class="t1">读书</h3>
+</div>
+  
+<div class="catbook"><a href="http://book.51cto.com/art/200704/46230.htm" title="Java程序设计教程"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/145314390.jpg" width="66" height="98" border="0"></a>
+<h5><a href="http://book.51cto.com/art/200704/46230.htm">Java程序设计教程</a></h5>
+<div class="c666 text">本书对第1版的某些章节作了合理的调整,增加了部分实用的程序,并在每一章的最后加了适量的练习题,以巩固前面所学的知识,更加有利</div>
+</div>
+
+
+<ul class="list03">
+
+<li><a href="http://book.51cto.com/art/200801/63533.htm" title="Ajax经典案例开发大全">Ajax经典案例开发大全</a></li>
+
+<li><a href="http://book.51cto.com/art/200801/63540.htm" title="ASP网络编程从入门到精通">ASP网络编程从入门到精通</a></li>
+
+<li><a href="http://book.51cto.com/art/200801/63546.htm" title="Eclipse从入门到精通(第2版)">Eclipse从入门到精通(第2版)</a></li>
+
+<li><a href="http://book.51cto.com/art/200801/63550.htm" title="Eclipse Web开发从入门到精通（实例版）">Eclipse Web开发从入门到精通（实例版）</a></li>
+
+</ul>
+</div>
+<p class="blank10"></p>
+<div class="bor">
+<div class="titbg">
+<h3 class="t1 fl">博文推荐</h3>
+<a class="tmore" href="http://blog.51cto.com/">更多&gt;&gt;</a></div>
+
+<ul class="list03">
+ <li><a href="http://tonyguo.blog.51cto.com/379574/174261/" target="_blank" title="WSUS 服务器的部署">WSUS 服务器的部署</a></li><li><a href="http://liuyuanljy.blog.51cto.com/607434/174182/" target="_blank" title="网络嗅探软件全接触(1)">网络嗅探软件全接触(1)</a></li><li><a href="http://tonyguo.blog.51cto.com/379574/174139/" target="_blank" title="Windows 脚本系列之四—映射网络盘脚本">Windows 脚本系列之四—映射网络盘脚</a></li><li><a href="http://nichemarket.blog.51cto.com/209445/174118/" target="_blank" title="员工不是棋子">员工不是棋子</a></li>
+</ul>
+</div>
+<p class="blank10"></p>
+<div class="tj">
+<div class="tlt">
+<h3>最新热帖</h3>
+<a class="more" href="http://bbs.51cto.com/hotthreads.php">更多&gt;&gt;</a></div>
+<ul>
+<li><a href="http://bbs.51cto.com/thread-448874-1.html" target="_blank" title="如何恢复已删除的  Linux下的 普通文件">如何恢复已删除的  Linux下的 普通文</a></li><li><a href="http://bbs.51cto.com/thread-344861-1.html" target="_blank" title="SQL Server 2005 盛宴系列 经典教程">SQL Server 2005 盛宴系列 经典教程</a></li><li><a href="http://bbs.51cto.com/thread-344861-1.html" target="_blank" title="SQL Server 2005 盛宴系列 经典教程">SQL Server 2005 盛宴系列 经典教程</a></li>
+</ul>
+</div>
+<div class="picAD">
+<iframe class="bann" frameborder="0" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/baidu.htm" scrolling="No" style="background-color: white; height: 265px; width: 300px; padding: 0px; margin: 0px; overflow: hidden; "></iframe>
+</div>
+</div>
+<p class="blank1"></p> 
+<!--leftbotcon end-->
+</div> 
+<div class="subweb">
+<h4>51CTO旗下网站</h4>
+<div>
+<a target="_blank" href="http://www.51cto.com/">领先的IT技术网站 51CTO</a>
+<a target="_blank" href="http://www.watchstor.com/">领先的中文存储媒体 WatchStor</a>
+<a target="_blank" href="http://www.cioage.com/">中国首个CIO网站 CIOage</a>
+<a target="_blank" href="http://www.hc3i.cn/">中国首家数字医疗网站 HC3i</a>
+<a target="_blank" href="http://www.linkphone.cn/">移动互联网生活门户 灵客风LinkPhone</a>
+</div>
+</div>
+<div id="ft"><div id="foot" align="center"><script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/copy_right.js"></script>Copyright&#169;2005-2013 <a href="http://www.51cto.com/">51CTO.COM</a> 版权所有 未经许可 请勿转载</div></div>
+<script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/count.js"></script><script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/count.php"></script>
+<!-- START GA.js -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20883758-1']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_addOrganic', 'baidu', 'word']);
+  _gaq.push(['_addOrganic', 'google', 'q']);
+  _gaq.push(['_addOrganic', 'soso', 'w']);
+  _gaq.push(['_addOrganic', '3721', 'name']);
+  _gaq.push(['_addOrganic', 'yodao', 'q']);
+  _gaq.push(['_addOrganic', 'vnet', 'kw']);
+  _gaq.push(['_addOrganic', 'sogou', 'query']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- END GA.js -->
+
+<!-- baidu.js -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff77ea1ecd95cb2a1bc65cbcb3aaba7d4' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/h.js" type="text/javascript"></script>
+<!--end baidu.js -->
+
+
+<!-- 新监测代码 -->
+<!-- 新监测代码 -->
+<div id="MyMoveAd" style="display: none; height: 2px; ">
+<span id="wordlink_1"><script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wordlink1.js"></script><script language="JavaScript" type="text/javascript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adjs.php"></script><a href="http://vd.51cto.com/adclick.php?bannerid=10178&zoneid=477&source=&dest=http%3A%2F%2Fserver.51cto.com%2FIntegrate-403152.htm" target="_blank"><font color="red">PureSystems沃土上的从兴</font></a><div id="beacon_10178" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adlog.php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div></span>
+<span id="wordlink_2"><script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wordlink2.js"></script><script language="JavaScript" type="text/javascript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adjs(1).php"></script><a href="http://vd.51cto.com/adclick.php?bannerid=9864&zoneid=478&source=&dest=http%3A%2F%2Fcloud.51cto.com%2Fexp%2Fsapbigdata2013%2Fdownload.html" target="_blank"><font color="blue">免费下载SAP大数据精华资料</font></a><div id="beacon_9864" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adlog(1).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div></span>
+<span id="wordlink_3"><script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wordlink3.js"></script><script language="JavaScript" type="text/javascript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adjs(2).php"></script><a href="http://vd.51cto.com/adclick.php?bannerid=10083&zoneid=479&source=&dest=http%3A%2F%2Fwww.hillstonenet.com.cn%2Fpub%2Fnewsletter%2F2013seminar%2Findex_51.html" target="_blank"><font color="red">山石网科用户研讨会邀您参会</font></a><div id="beacon_10083" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adlog(2).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div></span>
+<span id="wordlink_4"><script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/wordlink4.js"></script><script language="JavaScript" type="text/javascript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adjs(3).php"></script><a href="http://vd.51cto.com/adclick.php?bannerid=9996&zoneid=480&source=&dest=http%3A%2F%2Fwww.ruijie.com.cn%2Fproduct%2Fproduct.aspx%3FID%3D4da1b0e1-2469-4b62-a2b0-d3783518f461%26utm_source%3D51CTO%26utm_medium%3D%25E7%25BD%2591%25E7%25BB%259C%25E9%25A2%2591%25E9%2581%2593%25E5%2586%2585%25E9%25A1%25B5%26utm_campaign%3DNBS%25E4%25BA%25A4%25E6%258D%25A2%25E6%259C%25BA%26utm_adgroup%3Dwenzilian" target="_blank"><font color="red">中小企业智能网管交换机推荐</font></a><div id="beacon_9996" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/adlog(3).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div></span>
+<span id="pinglun"><script language="JavaScript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/getArtCount.php"></script>0</span>
+<span id="tonglan"></span>
+<span id="wordlink"><script language="JavaScript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/ad(3).js"></script></span>
+<script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/ad(3).js"></script>
+<span id="bookss"><script language="JavaScript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/getBookData.php"></script></span>
+</div>   
+<script language="javascript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/favorite.js"></script>
+
+<script language="javaScript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/dialog_utf8.js"></script>
+<script language="javaScript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/mail.js"></script>  
+<script type="text/javascript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/favorbox.js"></script>
+<script language="javascript" src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/clipboard.js"></script>
+<script language="javaScript"> 
+	var thistid=404920; 
+	
+	//收藏按钮
+	var favor_url = 'http://mobile.51cto.com/aengine-404920.htm';  // 如：http://bbs.51cto.com/thread-789649-1.html
+	var favor_title = '最火Android模拟神器Genymotion之Eclipse插件安装过程';       //  
+	
+	//绑定复制按钮
+	copy('msnqqcopy', 'http://mobile.51cto.com/aengine-404920.htm', '分享到MSN/QQ的链接复制成功!');
+//	copy('bbscopy', '[url=http://mobile.51cto.com/aengine-404920.htm][u]最火Android模拟神器Genymotion之Eclipse插件安装过程[/u][/url]', '分享到论坛的UBB代码复制成功!');
+
+</script><div style="position: absolute; left: 784px; top: 4811px; width: 34px; height: 12px; z-index: 99; "><embed id="ZeroClipboardMovie_1" src="http://images.51cto.com/images/art/newart1012/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="34" height="12" name="ZeroClipboardMovie_1" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=34&amp;height=12" wmode="transparent"></div> 
+<script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/index.php" charset="utf-8"></script>
+<script src="./最火Android模拟神器Genymotion之Eclipse插件安装过程 - 51CTO.COM_files/count(1).php" language="javascript"></script>
+<script language="javascript">
+document.getElementById('books').innerHTML = document.getElementById("bookss").innerHTML; 
+</script>
+
+
+
+</body></html>
